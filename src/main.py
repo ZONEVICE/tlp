@@ -4,11 +4,11 @@ import option
 import os
 
 # Validate arguments
-if sys.argv[1] != 'bf' and sys.argv[1] != 'cf':
+if sys.argv[1] != 'bf' and sys.argv[1] != 'af' and sys.argv[1] != 'cf':
     print('Invalid parameter to update')
     exit()
 
-if sys.argv[1] == 'bf':
+if sys.argv[1] == 'bf' or sys.argv[1] == 'af':
     if not sys.argv[2]:
         print('Invalid value for parameter to update')
         exit()
@@ -28,6 +28,9 @@ if sys.argv[1] == 'bf':
 if sys.argv[1] == 'bf':
     frequency = sys.argv[2] + '00000'
     option.update_cpu_battery_freq(frequency)
+elif sys.argv[1] == 'af':
+    frequency = sys.argv[2] + '00000'
+    option.update_cpu_ac_freq(frequency)
 elif sys.argv[1] == 'cf':
     option.display_current_cpu_frequency()
     exit()

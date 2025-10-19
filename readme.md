@@ -22,6 +22,7 @@ Now you can run the script using the command `tlpv` from any terminal.
 | Command                 | Description                           |
 | ----------------------- | ------------------------------------- |
 | `bf <frequency as kHz>` | Set CPU maximum frequency on battery  |
+| `af <frequency as kHz>` | Set CPU maximum frequency on AC       |
 | `cf`                    | Display current running CPU frequency |
 
 To set the CPU maximum frequency on battery (in kHz):
